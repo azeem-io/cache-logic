@@ -2,6 +2,7 @@
 	import { seo } from '$lib';
 	import ClientSection from '$lib/components/landing/ClientSection.svelte';
 	import HeroSection from '$lib/components/landing/HeroSection.svelte';
+	import LocationSection from '$lib/components/landing/LocationSection.svelte';
 	import SphereMask from '$lib/components/magic/SphereMask/SphereMask.svelte';
 </script>
 
@@ -24,4 +25,5 @@
 </svelte:head>
 <HeroSection />
 <ClientSection />
-<SphereMask />
+<!-- <SphereMask /> -->
+<LocationSection />
