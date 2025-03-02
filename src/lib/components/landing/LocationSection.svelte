@@ -1,4 +1,5 @@
 <script>
+	import Ripple from '../magic/Ripple.svelte';
 	import WorldMap from './WorldMap.svelte';
 
 	const locations = [
@@ -34,28 +35,22 @@
 			We help our clients from almost every part of the world.
 		</p>
 
-		<div class="relative mx-auto aspect-[16/9] w-fit overflow-hidden rounded-lg">
+		<div class="relative mx-auto aspect-[16/9] w-fit `scale-[1] overflow-hidden rounded-lg">
 			<WorldMap />
 			<div class="absolute inset-0">
 				{#each markers as marker}
 					<div
-						class="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#57C5FF]"
+						class="absolute h-36 w-36 -translate-x-1/2 -translate-y-1/2"
 						style="left: {marker.x}px; top: {marker.y}px;"
 					>
-						<span
-							class="absolute hidden -translate-x-1/2 -translate-y-full whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-white"
-							style="left: 50%; top: -24px;"
-						>
-							{marker.label}
-						</span>
+						<Ripple />
 					</div>
 				{/each}
 			</div>
 		</div>
-
-		<div class="mx-auto grid max-w-4xl grid-cols-1 gap-8 text-left md:grid-cols-3">
+		<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 text-left md:grid-cols-3">
 			{#each locations as location}
-				<div class="text-gray-800">
+				<div class="text-gray-800 text-center">
 					<h3 class="mb-2 text-xl font-semibold">{location.country}</h3>
 					<p class="mb-4 text-gray-600">{location.address}</p>
 					<a href="#" class="text-sm font-medium text-[#57C5FF] hover:text-[#46B0F0]"> Find Us </a>

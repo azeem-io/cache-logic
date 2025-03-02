@@ -67,6 +67,7 @@ const config: Config = {
 				'fade-up': 'fade-up 1000ms var(--animation-delay, 0ms) ease forwards',
 				shimmer: 'shimmer 8s infinite',
 				marquee: 'marquee var(--duration) infinite linear',
+				ripple:'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
 				'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
 			},
 			keyframes: {
@@ -115,6 +116,14 @@ const config: Config = {
 				marquee: {
 					from: { transform: 'translateX(0)' },
 					to: { transform: 'translateX(calc(-100% - var(--gap)))' }
+				}, 
+				ripple: {
+					"0%, 100%": {
+					  transform: "translate(-50%, -50%) scale(1)",
+					},
+					"50%": {
+					  transform: "translate(-50%, -50%) scale(0.9)",
+					}
 				},
 				'marquee-vertical': {
 					from: { transform: 'translateY(0)' },
