@@ -20,7 +20,7 @@
 	<meta name="twitter:title" content={seo.title} />
 	<meta name="twitter:description" content={seo.description} />
 	<meta name="twitter:image" content={seo.image} />
-	<meta name="twitter:site" content="@Sikandar_Bhide" />
+	<meta name="twitter:site" content="@cache_logic" />
 </svelte:head>
 <HeroSection />
 <ClientSection />
