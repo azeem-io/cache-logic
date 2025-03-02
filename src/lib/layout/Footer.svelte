@@ -89,10 +89,10 @@
 						/><path d="M9 3v7" /><path d="M21 10h-7" /><path d="M3 15h9" /></svg
 					>
 					<span class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-						Svee UI
+						Cache Logic
 					</span>
 				</a>
-				<p class="max-w-xs">UI Library for Design Engineers</p>
+				<p class="max-w-xs">IT service</p>
 			</div>
 			<div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10">
 				{#each footerNavs as nav}
@@ -138,7 +138,7 @@
 				{' '}
 				{new Date().getFullYear()}
 				{' '}
-				<a href="/" class="cursor-pointer">Svee UI</a>
+				<a href="/" class="cursor-pointer">Cache Logic</a>
 				. All Rights Reserved.
 			</span>
 		</div>
