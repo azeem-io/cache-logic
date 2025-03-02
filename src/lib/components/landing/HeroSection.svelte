@@ -16,46 +16,42 @@
 	};
 </script>
 
-<section id="hero" class="relative mx-auto mt-32 max-w-7xl px-6 text-center md:px-8">
-	<div
-		class="backdrop-filter-[12px] group inline-flex h-7 -translate-y-4 animate-fade-in items-center justify-between gap-1 rounded-full border border-white/5 bg-white/10 px-3 text-xs text-white opacity-0 transition-all ease-in hover:cursor-pointer hover:bg-white/20 dark:text-black"
-	>
-		<AnimatedShinyText class="inline-flex items-center justify-center">
-			<span>✨ Introducing SCahce Logic</span>
+<section id="hero" class="relative mx-auto mt-32 px-6 md:px-8">
+	<div class="flex flex-col rounded-2xl bg-[#27538E] p-16">
+		<!-- <div
+			class="backdrop-filter-[12px] group inline-flex h-7 -translate-y-4 animate-fade-in items-center justify-between gap-1 rounded-full border border-white/5 bg-white/10 px-3 text-xs text-white opacity-0 transition-all ease-in hover:cursor-pointer hover:bg-white/20 "
+		>
+			<AnimatedShinyText class="inline-flex items-center justify-center">
+				<span>✨ Introducing SCahce Logic</span>
+				{' '}
+				<ArrowRightIcon
+					class="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
+				/>
+			</AnimatedShinyText>
+		</div> -->
+		<h1
+			class="animate-fade-in text-balance bg-gradient-to-br from-black from-30% to-black/40 bg-clip-text py-6 text-left text-5xl font-medium leading-none tracking-tighter text-transparent text-white opacity-0 [--animation-delay:200ms] dark:from-white dark:to-white/40 sm:text-6xl md:text-7xl lg:text-8xl"
+		>
+			Fast-Tracking Your AI
+			<br class="hidden md:block" />
 			{' '}
+			Evolution
+		</h1>
+		<p
+			class="mb-12 animate-fade-in  text-lg tracking-tight text-[#D9D9D9] opacity-0 [--animation-delay:400ms] md:text-xl"
+		>
+			Empowering businesses with cutting-edge technology and tailored solutions.
+		</p>
+		<Button
+			class="w-fit animate-fade-in gap-1 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms]"
+		>
+			<span>Get Started for free </span>
 			<ArrowRightIcon
-				class="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
+				class="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
 			/>
-		</AnimatedShinyText>
+		</Button>
 	</div>
-	<h1
-		class="-translate-y-4 animate-fade-in text-balance bg-gradient-to-br from-black from-30% to-black/40 bg-clip-text py-6 text-5xl font-medium leading-none tracking-tighter text-transparent opacity-0 [--animation-delay:200ms] dark:from-white dark:to-white/40 sm:text-6xl md:text-7xl lg:text-8xl"
-	>
-		Fast-Tracking Your AI
-		<br class="hidden md:block" />
-		{' '}
-		Evolution
-	</h1>
-	<p
-		class="mb-12 -translate-y-4 animate-fade-in text-balance text-lg tracking-tight text-gray-400 opacity-0 [--animation-delay:400ms] md:text-xl"
-	>
-		Beautifully designed, animated components and templates built with
-		<br class="hidden md:block" />
-		{' '}
-		Tailwind CSS, <a href="https://svelte.dev" class="underline underline-offset-2">Svelte</a>, and
-		<a href="https://animation-svelte.vercel.app" class="underline underline-offset-2"
-			>Svelte Animations</a
-		>.
-	</p>
-	<Button
-		class="-translate-y-4 animate-fade-in gap-1 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms] dark:text-black"
-	>
-		<span>Get Started for free </span>
-		<ArrowRightIcon
-			class="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
-		/>
-	</Button>
-	<div
+	<!-- <div
 		use:inview={{
 			unobserveOnEnter: true,
 			rootMargin: '-100px'
@@ -87,5 +83,5 @@
 				class="relative block size-full rounded-[inherit] border object-contain dark:hidden"
 			/>
 		</div>
-	</div>
+	</div> -->
 </section>

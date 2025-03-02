@@ -5,7 +5,6 @@
 	import Header from '$lib/layout/Header.svelte';
 	
 </script>
-<ModeWatcher />
 
 <div class="min-h-screen bg-background font-sans antialiased">
 	<Header />
