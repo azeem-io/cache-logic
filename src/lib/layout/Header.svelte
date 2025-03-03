@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Logo2 from '$lib/components/icons/Logo2.svelte';
-	import NavDropdowns from '$lib/components/magic/NavDropdowns.svelte';
+	import NavLinks from '$lib/components/magic/NavLinks.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { cn } from '$lib/utils';
 	import { AlignJustify, XIcon } from 'lucide-svelte';
@@ -55,7 +55,9 @@
 	<div class="container flex h-14 items-center justify-between">
 		<!-- <a class="text-md flex items-center" href="/"> Cache Logic </a> -->
 		<Logo2 />
-		<NavDropdowns />
+		<div class="hidden md:flex">
+			<NavLinks />
+		</div>
 		<div class="ml-auto hidden h-full items-center md:flex">
 			<Button class="mr-6 text-sm" href="/contact">Contact Us</Button>
 		</div>

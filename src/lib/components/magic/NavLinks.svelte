@@ -60,7 +60,6 @@
 
 			const tabCenter = tabRect.left + tabRect.width / 2 - contentLeft;
 
-			//   setLeft(tabCenter);
 			left = tabCenter;
 		}
 	};
@@ -77,6 +76,10 @@
 	};
 </script>
 
+<a
+	href="/"
+	class="ml-8 px-3 py-1.5 text-sm font-bold text-gray-600 transition-colors hover:text-gray-900">Home</a
+>
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:mouseleave={() => handleSetSelected(null)} class="relative flex h-fit gap-2">
 	{#each TABS as item (item)}
@@ -84,8 +87,8 @@
 			id="shift-tab-{item.id}"
 			on:click={() => handleSetSelected(item.id)}
 			on:mouseenter={() => handleSetSelected(item.id)}
-			class={`flex items-center gap-1 rounded-full px-3 py-1.5 text-sm transition-colors ${
-				selected === item.id ? ' bg-neutral-800 text-neutral-100' : 'text-neutral-400'
+			class={`flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-bold transition-colors ${
+				selected === item.id ? '  text-gray-900' : 'text-gray-600'
 			}`}
 		>
 			<span>
@@ -160,7 +163,7 @@
 										{#each TABS.find((tab) => tab.id === selected)?.links || [] as link}
 											<a
 												href={link.link}
-												class="py-2 px-4 transition-colors duration-200 hover:bg-slate-200 hover:text-black"
+												class="px-4 py-2 text-sm transition-colors duration-200 hover:bg-slate-200 hover:text-black"
 											>
 												{link.name}
 											</a>
@@ -175,3 +178,8 @@
 		{/if}
 	</AnimatePresence>
 </div>
+
+<a
+	href="/contact"
+	class="px-3 py-1.5 text-sm font-bold text-gray-600 transition-colors hover:text-gray-900">Contact</a
+>
