@@ -48,7 +48,7 @@
 
 <svelte:window bind:innerWidth />
 <header
-	class="fixed left-0 top-0 z-50 w-full -translate-y-4 animate-fade-in border-b opacity-0 backdrop-blur-md"
+	class="fixed left-0 top-0 z-[999] w-full -translate-y-4 animate-fade-in border-b opacity-0 backdrop-blur-md bg-white"
 >
 	<!-- {#if innerWidth < 768} -->
 	<div class="container flex h-14 items-center justify-between">
@@ -56,8 +56,7 @@
 		<Logo2 />
 
 		<div class="ml-auto flex h-full items-center">
-			<a class="mr-6 text-sm" href="/signin"> Log in </a>
-			<Button variant="secondary" class="mr-6 text-sm" href="/signup">Sign up</Button>
+			<Button  class="mr-6 text-sm" href="/contact">Contact Us</Button>
 		</div>
 		<button class="ml-6 md:hidden" use:toggleOverflowHidden>
 			<span class="sr-only">Toggle menu</span>

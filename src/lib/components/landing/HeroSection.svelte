@@ -16,21 +16,16 @@
 	};
 </script>
 
-<section id="hero" class="relative mx-auto mt-32 px-6 md:px-8">
-	<div class="flex flex-col rounded-2xl bg-[#27538E] p-16">
-		<!-- <div
-			class="backdrop-filter-[12px] group inline-flex h-7 -translate-y-4 animate-fade-in items-center justify-between gap-1 rounded-full border border-white/5 bg-white/10 px-3 text-xs text-white opacity-0 transition-all ease-in hover:cursor-pointer hover:bg-white/20 "
-		>
-			<AnimatedShinyText class="inline-flex items-center justify-center">
-				<span>✨ Introducing SCahce Logic</span>
-				{' '}
-				<ArrowRightIcon
-					class="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5"
-				/>
-			</AnimatedShinyText>
-		</div> -->
+<section id="hero" class="relative mx-auto mt-20 h-screen px-6 md:px-8">
+	<div
+		class=" absolute left-1/2 top-44 z-[0] flex h-[70%] w-[92%] -translate-x-1/2 flex-col rounded-2xl bg-[#27538E]"
+	></div>
+
+	<div
+		class="relative z-[100] flex h-[85%] flex-col justify-center rounded-2xl bg-[#1D315F] bg-[url('/images/hero.webp')] bg-cover bg-center p-16 shadow-2xl"
+	>
 		<h1
-			class="animate-fade-in text-balance bg-gradient-to-br from-black from-30% to-black/40 bg-clip-text py-6 text-left text-5xl font-medium leading-none tracking-tighter text-transparent text-white opacity-0 [--animation-delay:200ms] dark:from-white dark:to-white/40 sm:text-6xl md:text-7xl lg:text-8xl"
+			class="animate-fade-in text-balance bg-gradient-to-br from-black from-30% to-black/40 bg-clip-text py-6 text-left text-5xl font-bold text-transparent text-white opacity-0 [--animation-delay:200ms] dark:from-white dark:to-white/40 sm:text-3xl md:text-5xl lg:text-6xl"
 		>
 			Fast-Tracking Your AI
 			<br class="hidden md:block" />
@@ -38,12 +33,13 @@
 			Evolution
 		</h1>
 		<p
-			class="mb-12 animate-fade-in  text-lg tracking-tight text-[#D9D9D9] opacity-0 [--animation-delay:400ms] md:text-xl"
+			class="mb-12 animate-fade-in max-w-lg text-lg tracking-tight text-[#D9D9D9] opacity-0 [--animation-delay:400ms] md:text-xl"
 		>
 			Empowering businesses with cutting-edge technology and tailored solutions.
 		</p>
 		<Button
-			class="w-fit animate-fade-in gap-1 rounded-lg text-white opacity-0 ease-in-out [--animation-delay:600ms]"
+			variant="secondary"
+			class="w-fit animate-fade-in gap-1 rounded-lg  opacity-0 ease-in-out [--animation-delay:600ms]"
 		>
 			<span>Get Started for free </span>
 			<ArrowRightIcon
@@ -51,6 +47,7 @@
 			/>
 		</Button>
 	</div>
+
 	<!-- <div
 		use:inview={{
 			unobserveOnEnter: true,
