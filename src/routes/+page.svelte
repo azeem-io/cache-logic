@@ -3,6 +3,7 @@
 	import ClientSection from '$lib/components/landing/ClientSection.svelte';
 	import HeroSection from '$lib/components/landing/HeroSection.svelte';
 	import LocationSection from '$lib/components/landing/LocationSection.svelte';
+	import WhyUsSection from '$lib/components/landing/WhyUsSection.svelte';
 	import SphereMask from '$lib/components/magic/SphereMask/SphereMask.svelte';
 </script>
 
@@ -25,6 +26,6 @@
 </svelte:head>
 <HeroSection />
 <ClientSection />
-
+<WhyUsSection />
 <!-- <SphereMask /> -->
 <LocationSection />
