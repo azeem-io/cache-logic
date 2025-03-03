@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Logo2 from '$lib/components/icons/Logo2.svelte';
+	import NavDropdowns from '$lib/components/magic/NavDropdowns.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { cn } from '$lib/utils';
 	import { AlignJustify, XIcon } from 'lucide-svelte';
@@ -48,15 +49,15 @@
 
 <svelte:window bind:innerWidth />
 <header
-	class="fixed left-0 top-0 z-[999] w-full -translate-y-4 animate-fade-in border-b opacity-0 backdrop-blur-md bg-white"
+	class="fixed left-0 top-0 z-[999] w-full -translate-y-4 animate-fade-in border-b bg-white opacity-0 backdrop-blur-md"
 >
 	<!-- {#if innerWidth < 768} -->
 	<div class="container flex h-14 items-center justify-between">
 		<!-- <a class="text-md flex items-center" href="/"> Cache Logic </a> -->
 		<Logo2 />
-
-		<div class="ml-auto hidden md:flex h-full items-center">
-			<Button  class="mr-6 text-sm" href="/contact">Contact Us</Button>
+		<NavDropdowns />
+		<div class="ml-auto hidden h-full items-center md:flex">
+			<Button class="mr-6 text-sm" href="/contact">Contact Us</Button>
 		</div>
 		<button class="ml-6 md:hidden" use:toggleOverflowHidden>
 			<span class="sr-only">Toggle menu</span>
