@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { AnimatePresence, Motion, useMotionValue, useSpring, useTransform } from 'svelte-motion';
 	import Ripple from '../magic/Ripple.svelte';
 	import WorldMap from './WorldMap.svelte';
 	import Badge from '../magic/Badge.svelte';
-	import * as Tooltip from '$lib/components/ui/tooltip';
 	import SectionHeading from './SectionHeading.svelte';
 
 	const locations = [
@@ -29,23 +27,21 @@
 <div class="bg-white px-4 py-16 sm:px-6 lg:px-8">
 	<div class="mx-auto flex w-full flex-col items-center gap-12 text-center">
 		<SectionHeading
-			badgeText="Our Locations"
-			heading="We are WORLDWIDE"
-			paragraph="We help our clients from almost every part of the world."
+			badgeText="Why Us"
+			heading="How does Cache Logic stands out?"
+			paragraph="At Cache Logic, we are a passionate team of tech experts dedicated to powering your IT
+				evolution. Founded by industry leaders with diverse expertise, we focus on delivering
+				innovative, reliable, and scalable tech solutions—from AI and automation to cybersecurity
+				and app development. Our mission is simple: help your business stay ahead in a digital
+				world."
 		/>
-		<div class="`scale-[1] relative mx-auto aspect-[16/9] w-fit overflow-hidden rounded-lg">
-			<WorldMap />
-			<div class="absolute inset-0">
-				{#each markers as marker, i}
-					<div
-						class="absolute h-36 w-36 -translate-x-1/2 -translate-y-1/2"
-						style="left: {marker.x}px; top: {marker.y}px;"
-					>
-						<Ripple />
-					</div>
-				{/each}
-			</div>
-		</div>
+
+		<img
+			src="/images/meeting.png"
+			alt="meeting"
+			class="w-full max-w-5xl rounded-[16px] border border-[4px] border-[#3A6EB3] shadow-xl"
+		/>
+
 		<div class="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 text-left md:grid-cols-3">
 			{#each locations as location}
 				<div class="text-center text-gray-800">

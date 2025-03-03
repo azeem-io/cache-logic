@@ -10,37 +10,23 @@
 	import Company4 from '../icons/Company4.svelte';
 	import Company5 from '../icons/Company5.svelte';
 	import Company6 from '../icons/Company6.svelte';
+	import Marquee from '../magic/marquee/Marquee.svelte';
 </script>
 
-<section id="clients" class="mx-auto px-6  text-center md:px-8">
+<section id="clients" class="mx-auto px-6 text-center md:px-8">
 	<div class="py-14">
-		<div class="mx-auto max-w-screen px-4 md:px-8">
-			<h2 class="text-center font-medium text-gray-600">
+		<div class="max-w-screen mx-auto px-4 md:px-8">
+			<h2 class="pb-4 text-center font-medium text-gray-600">
 				Join 400+ companies that trust our innovative IT solutions to drive growth and success.
 			</h2>
-			<div class="mt-6">
-				<ul class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:gap-x-16">
-					<li>
-						<Company1 />
-					</li>
-					<li>
-						<Company2 />
-					</li>
-					<li>
-						<Company3 />
-					</li>
-
-					<li>
-						<Company4 />
-					</li>
-					<li>
-						<Company5 />
-					</li>
-					<li>
-						<Company6 />
-					</li>
-				</ul>
-			</div>
+			<Marquee>
+				<Company1 />
+				<Company2 />
+				<Company3 />
+				<Company4 />
+				<Company5 />
+				<Company6 />
+			</Marquee>
 		</div>
 	</div>
 </section>
