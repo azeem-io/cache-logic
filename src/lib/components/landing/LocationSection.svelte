@@ -1,6 +1,9 @@
-<script>
+<script lang="ts">
+	import { AnimatePresence, Motion, useMotionValue, useSpring, useTransform } from 'svelte-motion';
 	import Ripple from '../magic/Ripple.svelte';
 	import WorldMap from './WorldMap.svelte';
+	import Badge from '../magic/Badge.svelte';
+	import * as Tooltip from '$lib/components/ui/tooltip';
 
 	const locations = [
 		{
@@ -23,22 +26,19 @@
 </script>
 
 <div class="bg-white px-4 py-16 sm:px-6 lg:px-8">
-	<div class="mx-auto w-full text-center">
-		<button
-			class="mb-4 rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-[#57C5FF] transition-colors hover:bg-gray-200"
-		>
-			Our Locations
-		</button>
+	<div class="mx-auto flex w-full flex-col items-center gap-12 text-center">
+		<div class="flex flex-col items-center gap-6">
+			<Badge>Our Locations</Badge>
+			<h2 class=" text-4xl font-bold text-gray-900">We are WORLDWIDE</h2>
+			<p class="mx-auto max-w-2xl text-lg text-gray-600">
+				We help our clients from almost every part of the world.
+			</p>
+		</div>
 
-		<h2 class="mb-4 text-4xl font-bold text-gray-900">We are WORLDWIDE</h2>
-		<p class="mx-auto mb-12 max-w-2xl text-lg text-gray-600">
-			We help our clients from almost every part of the world.
-		</p>
-
-		<div class="relative mx-auto aspect-[16/9] w-fit `scale-[1] overflow-hidden rounded-lg">
+		<div class="`scale-[1] relative mx-auto aspect-[16/9] w-fit overflow-hidden rounded-lg">
 			<WorldMap />
 			<div class="absolute inset-0">
-				{#each markers as marker}
+				{#each markers as marker, i}
 					<div
 						class="absolute h-36 w-36 -translate-x-1/2 -translate-y-1/2"
 						style="left: {marker.x}px; top: {marker.y}px;"
@@ -48,21 +48,21 @@
 				{/each}
 			</div>
 		</div>
-		<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 text-left md:grid-cols-3">
+		<div class="mx-auto grid max-w-7xl w-full grid-cols-1 gap-8 text-left md:grid-cols-3">
 			{#each locations as location}
-				<div class="text-gray-800 text-center">
+				<div class="text-center text-gray-800">
 					<h3 class="mb-2 text-xl font-semibold">{location.country}</h3>
 					<p class="mb-4 text-gray-600">{location.address}</p>
-					<a href="#" class="text-sm font-medium text-[#57C5FF] hover:text-[#46B0F0]"> Find Us </a>
+					<a href="#" class="font-medium text-[#415EC6] hover:text-[#415EC6]"> Find Us </a>
 				</div>
 			{/each}
 
-			<div class="text-gray-800">
+			<div class="text-center text-gray-800">
 				<h3 class="mb-2 text-xl font-semibold">Whole Earth</h3>
 				<p class="mb-4 text-gray-600">{businessHours}</p>
 				<a
 					href="tel:{phoneNumber.replace(/\D/g, '')}"
-					class="text-sm font-medium text-[#57C5FF] hover:text-[#46B0F0]"
+					class="text-sm font-medium text-[#415EC6] hover:text-[#415EC6]"
 				>
 					{phoneNumber}
 				</a>
