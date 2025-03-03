@@ -55,7 +55,7 @@
 		<!-- <a class="text-md flex items-center" href="/"> Cache Logic </a> -->
 		<Logo2 />
 
-		<div class="ml-auto flex h-full items-center">
+		<div class="ml-auto hidden md:flex h-full items-center">
 			<Button  class="mr-6 text-sm" href="/contact">Contact Us</Button>
 		</div>
 		<button class="ml-6 md:hidden" use:toggleOverflowHidden>
@@ -72,7 +72,7 @@
 
 <nav
 	class={cn(
-		`fixed left-0 top-0 z-50 h-screen w-full overflow-auto `,
+		`fixed left-0  top-0 z-[999] h-screen w-full overflow-auto `,
 		{
 			'pointer-events-none': !hamburgerMenuIsOpen
 		},
@@ -83,7 +83,7 @@
 >
 	{#if hamburgerMenuIsOpen === true}
 		<div class="container flex h-14 items-center justify-between">
-			<a class="text-md flex items-center" href="/"> Cache Logic </a>
+			<Logo2 />
 
 			<button class="md:hidden" use:toggleOverflowHidden>
 				<span class="sr-only">Toggle menu</span>
