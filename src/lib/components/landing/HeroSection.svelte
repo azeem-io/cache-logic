@@ -16,13 +16,13 @@
 	};
 </script>
 
-<section id="hero" class="relative mx-auto mt-20 h-screen px-6 md:px-8">
+<section id="hero" class="relative mx-auto mt-[4.5rem] h-screen px-6 md:px-8">
 	<div
-		class=" absolute left-1/2 top-44 z-[0] flex h-[70%] w-[92%] -translate-x-1/2 flex-col rounded-2xl bg-[#27538E]"
+		class=" absolute left-1/2 top-0 z-[0] flex h-[86vh] w-[92%] -translate-x-1/2 flex-col rounded-2xl bg-[#27538E]"
 	></div>
 
 	<div
-		class="relative z-[100] flex h-[85%] flex-col justify-center rounded-2xl bg-[#1D315F] bg-[url('/images/hero.webp')] bg-cover bg-center p-16 shadow-2xl"
+		class="relative z-[100] flex h-[83vh] flex-col justify-center rounded-2xl bg-[#1D315F] bg-[url('/images/hero.webp')] bg-cover bg-center p-16 shadow-2xl"
 	>
 		<h1
 			class="animate-fade-in text-balance bg-gradient-to-br from-black from-30% to-black/40 bg-clip-text py-6 text-left text-5xl font-bold text-transparent text-white opacity-0 [--animation-delay:200ms] dark:from-white dark:to-white/40 sm:text-3xl md:text-5xl lg:text-6xl"
@@ -33,7 +33,7 @@
 			Evolution
 		</h1>
 		<p
-			class="mb-12 animate-fade-in max-w-lg text-lg tracking-tight text-[#D9D9D9] opacity-0 [--animation-delay:400ms] md:text-xl"
+			class="mb-12 max-w-lg animate-fade-in text-lg tracking-tight text-[#D9D9D9] opacity-0 [--animation-delay:400ms] md:text-xl"
 		>
 			Empowering businesses with cutting-edge technology and tailored solutions.
 		</p>
