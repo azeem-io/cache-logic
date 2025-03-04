@@ -19,10 +19,6 @@
 				{
 					name: 'Cloud Solutions',
 					link: '/cloud'
-				},
-				{
-					name: 'Data Analytics',
-					link: '/analytics'
 				}
 			]
 		},
@@ -78,7 +74,8 @@
 
 <a
 	href="/"
-	class="ml-8 px-3 py-1.5 text-sm font-bold text-gray-600 transition-colors hover:text-gray-900">Home</a
+	class="ml-8 px-3 py-1.5 text-sm font-bold text-gray-600 transition-colors hover:text-gray-900"
+	>Home</a
 >
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:mouseleave={() => handleSetSelected(null)} class="relative flex h-fit gap-2">
@@ -181,5 +178,6 @@
 
 <a
 	href="/contact"
-	class="px-3 py-1.5 text-sm font-bold text-gray-600 transition-colors hover:text-gray-900">Contact</a
+	class="px-3 py-1.5 text-sm font-bold text-gray-600 transition-colors hover:text-gray-900"
+	>Contact</a
 >
