@@ -1,0 +1,114 @@
+<script lang="ts">
+	import Ripple from '../magic/Ripple.svelte';
+	import Badge from '../magic/Badge.svelte';
+	import SectionHeading from './SectionHeading.svelte';
+	import { ExternalLink, Twitter, Linkedin, Globe, ArrowUpRightIcon } from 'lucide-svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
+
+	const teamMembers = [
+		{
+			id: 'faizan',
+			name: 'Faizan Ahmad',
+			role: 'Founder & CEO',
+			bio: 'Former co-founder of Opendoor. Early staff at Apple and Google.',
+			image: '/images/team1.png',
+			featured: true,
+			socials: [
+				{ icon: Twitter, url: '#' },
+				{ icon: Linkedin, url: '#' },
+				{ icon: Globe, url: '#' }
+			]
+		},
+		{
+			id: 'abdullah',
+			name: 'Abdullah Sarfaraz',
+			role: 'Co-Founder',
+			bio: '',
+			image: '/images/team2.png',
+			featured: false,
+			socials: []
+		},
+		{
+			id: 'annie',
+			name: 'Annie Stanley',
+			role: 'Product Manager',
+			bio: '',
+			image: '/images/team3.png',
+			featured: false,
+			socials: []
+		}
+	];
+</script>
+
+<div class="bg-white px-4 py-16 sm:px-6 lg:px-8">
+	<div class="mx-auto flex w-full flex-col items-center gap-12 text-center">
+		<SectionHeading
+			badgeText="Our Team"
+			heading="Meet Our Team"
+			paragraph="Our philosophy is simple — hire a team of diverse, passionate people and foster a
+				culture that empowers you to do your best work."
+		/>
+
+		<div class="flex flex-col gap-4 md:flex-row">
+			<Button href="#" variant="outline">Read our principles</Button>
+			<Button href="#">We're hiring!</Button>
+		</div>
+
+		<div class="mx-auto flex w-full max-w-7xl flex-col gap-6 lg:flex-row">
+			<!-- Featured team member (Faizan) -->
+			<div class="relative w-full overflow-hidden rounded-3xl lg:w-3/5" style="aspect-ratio: 4/3;">
+				<img
+					src={teamMembers[0].image}
+					alt={teamMembers[0].name}
+					class="h-full w-full object-cover"
+				/>
+				<div class="absolute bottom-0 left-0 right-0 p-8 text-left text-white">
+					<!-- Frosted glass effect container -->
+					<div class="rounded-2xl border border-white/30 bg-white/10 px-5 py-6 backdrop-blur-md">
+						<div class="flex flex-col gap-4 font-semibold">
+							<h3 class="flex w-full justify-between text-3xl">
+								{teamMembers[0].name}
+								<ArrowUpRightIcon />
+							</h3>
+							<p class="text-lg">{teamMembers[0].role}</p>
+							<p class="mt-1">{teamMembers[0].bio}</p>
+						</div>
+						<div class="mt-4 flex space-x-3">
+							{#each teamMembers[0].socials as social}
+								<a href={social.url} class="text-white hover:text-gray-300">
+									<svelte:component this={social.icon} class="h-5 w-5" />
+								</a>
+							{/each}
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Other team members -->
+			<div class="flex w-full flex-col gap-6 lg:w-2/5">
+				{#each teamMembers.slice(1) as member}
+					<div
+						class="relative w-full flex-1 overflow-hidden rounded-3xl"
+						style="aspect-ratio: 8/7;"
+					>
+						<img src={member.image} alt={member.name} class="h-full w-full object-cover" />
+						<div class="absolute bottom-0 left-0 right-0 p-6 text-left text-white">
+							<!-- Info container -->
+							<div
+								class="rounded-2xl border border-white/30 bg-white/10 px-5 py-6 backdrop-blur-md"
+							>
+								<div class="flex flex-col gap-4 font-semibold">
+									<h3 class="flex w-full justify-between text-3xl">
+										{member.name}
+										<ArrowUpRightIcon />
+									</h3>
+									<p class="text-lg text-gray-200">{member.role}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+</div>
