@@ -77,7 +77,7 @@
 				<div
 					use:inview={{
 						unobserveOnEnter: true,
-						rootMargin: '-100px'
+						rootMargin: '-80px'
 					}}
 					on:inview_change={handleCardInView(i)}
 					class="group h-full w-full {service.colSpan ? 'md:col-span-2' : ''}"
