@@ -15,12 +15,12 @@
 	{#if mounted}
 		<div
 			transition:fly={{ y: -60, delay: 200, duration: 400, easing: cubicOut }}
-			class=" absolute left-1/2 top-[6vh] z-[0] flex h-[80vh] w-[88%] -translate-x-1/2 flex-col rounded-2xl bg-[#27538E] md:w-[92%]"
+			class=" absolute left-1/2 top-[6vh] z-[0] flex h-[77vh] md:h-[80vh] w-[88%] -translate-x-1/2 flex-col rounded-2xl bg-[#27538E] md:w-[92%]"
 		></div>
 
 		<div
 			transition:fly={{ y: 50, easing: cubicOut }}
-			class="relative z-[100] flex h-[83vh] flex-col justify-center rounded-2xl bg-[#1D315F] bg-[url('/images/hero.webp')] bg-cover bg-center p-6 shadow-2xl md:p-16"
+			class="relative z-[100] flex h-[80vh] md:h-[83vh] flex-col justify-center rounded-2xl bg-[#1D315F] bg-[url('/images/hero.webp')] bg-cover bg-center p-6 shadow-2xl md:p-16"
 		>
 			<h1
 				transition:fly={{ y: 30, delay: 180, duration: 400 }}

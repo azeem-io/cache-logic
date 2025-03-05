@@ -1,9 +1,13 @@
 <script>
-	import DiscordSvg from '$lib/imgs/discord.svg';
-	import TwitterSvg from '$lib/imgs/x.svg';
-	import LinkedInSvg from '$lib/imgs/discord.svg';
-	import FacebookSvg from '$lib/imgs/discord.svg';
+	import FacebookIcon from '$lib/components/icons/FacebookIcon.svelte';
+	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
+	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
+
 	import Logo2 from '$lib/components/icons/Logo2.svelte';
+	import TwitterIcon from '$lib/components/icons/TwitterIcon.svelte';
+	import { Phone } from 'lucide-svelte';
+	import LogoText from '$lib/components/icons/LogoText.svelte';
 
 	const footerNavs = [
 		{
@@ -31,24 +35,24 @@
 
 	const footerSocials = [
 		{
-			href: 'https://discord.com',
-			name: 'Discord',
-			icon: DiscordSvg
-		},
-		{
-			href: 'https://twitter.com',
-			name: 'Twitter',
-			icon: TwitterSvg
+			href: 'https://x.com',
+			name: 'X',
+			icon: TwitterIcon
 		},
 		{
 			href: 'https://linkedin.com',
-			name: 'LinkedIn',
-			icon: LinkedInSvg
+			name: 'Linkedin',
+			icon: LinkedinIcon
 		},
 		{
 			href: 'https://facebook.com',
 			name: 'Facebook',
-			icon: FacebookSvg
+			icon: FacebookIcon
+		},
+		{
+			href: 'https://github.com',
+			name: 'Github',
+			icon: GithubIcon
 		}
 	];
 </script>
@@ -56,35 +60,29 @@
 <footer class="relative w-full overflow-hidden bg-[#0C111D] text-gray-400">
 	<!-- Header Section (from the image) -->
 	<div
-		class="mx-auto flex w-full max-w-screen-2xl flex-row items-center justify-between px-8 py-16"
+		class="mx-auto flex w-full max-w-screen-2xl flex-col items-center justify-between px-8 py-12 pb-16 md:flex-row md:py-16"
 	>
 		<div class="flex flex-col gap-4">
-			<h1 class="text-2xl font-bold text-white">Innovating IT solutions for the modern world.</h1>
-			<p class=" text-lg text-gray-300">
+			<h1 class=" text-3xl font-bold text-white md:text-2xl">
+				Innovating IT solutions for the modern world.
+			</h1>
+			<p class=" mb-6 text-lg text-gray-300">
 				Empowering businesses with cutting-edge technology and tailored solutions.
 			</p>
 		</div>
-		<div class="mb-12 flex gap-4">
-			<a
-				href="/services"
-				class="rounded-full bg-white px-6 py-3 font-medium text-[#0C111D] transition-colors hover:bg-gray-200"
+		<div class="flex w-full flex-col gap-4 md:mb-12 md:w-auto md:flex-row">
+			<Button variant="secondary" href="/services">Discover Our Services</Button>
+			<Button variant="ghost" class="border text-white" href="/contact"
+				><Phone size={16} class="mr-1.5" /> Contact Us</Button
 			>
-				Discover Our Services
-			</a>
-			<a
-				href="/contact"
-				class="flex items-center gap-2 rounded-full border border-white bg-transparent px-6 py-3 font-medium text-white transition-colors hover:bg-gray-800"
-			>
-				Contact Us
-			</a>
 		</div>
 	</div>
 
-	<!-- Main Footer Content -->
+	<div class="mx-auto max-w-screen-2xl border-t border-neutral-700/30 pb-1" />
+
 	<div
-		class="mx-auto flex max-w-screen-2xl flex-col p-4 px-8 py-16 text-white md:flex-row md:justify-between md:gap-8"
+		class="mx-auto flex max-w-screen-2xl flex-col p-4 px-8 py-16 pb-12 text-white md:flex-row md:justify-between md:gap-8"
 	>
-		<!-- Logo and Description -->
 		<div class="mb-12 flex flex-col gap-4 md:mb-0">
 			<Logo2 />
 			<p class=" mt-4 max-w-xs text-sm">
@@ -94,7 +92,6 @@
 			<span class="mt-auto text-sm text-gray-500"> © 2025 Cache Logic. All rights reserved. </span>
 		</div>
 
-		<!-- Navigation Links -->
 		<div class="grid grid-cols-1 gap-8 sm:grid-cols-1 md:grid-cols-1">
 			{#each footerNavs as nav}
 				<div>
@@ -116,7 +113,7 @@
 				</div>
 			{/each}
 		</div>
-		<div class="mb-2 flex flex-1 items-end justify-end gap-4 sm:mb-0">
+		<div class=" mt-8 flex flex-1 items-end gap-4 sm:mb-0 md:justify-end">
 			{#each footerSocials as social}
 				<a
 					href={social.href}
@@ -125,18 +122,13 @@
 					class="text-gray-400 transition-colors duration-200 hover:text-gray-200"
 					aria-label={social.name}
 				>
-					<img src={social.icon} class="size-5" alt={social.name} />
+					<svelte:component this={social.icon} />
 				</a>
 			{/each}
 		</div>
 	</div>
+	<div class="mx-auto max-w-screen-2xl border-t border-neutral-700/20 pb-8" />
+	<LogoText />
 
-	<!-- Footer Bottom (Socials and Copyright) -->
-	<div class="mx-auto  pb-48 max-w-screen-2xl border-t border-neutral-700/20" />
 
-	<div
-		class="pointer-events-none absolute -bottom-[50%] left-0 right-0 -translate-y-1/2 text-center text-[250px] italic text-gray-500 opacity-10"
-	>
-		Cache Logic
-	</div>
 </footer>
