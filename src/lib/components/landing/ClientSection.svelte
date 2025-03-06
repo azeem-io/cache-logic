@@ -1,15 +1,10 @@
 <script>
-	import GoogleSvg from '$lib/imgs/Google.svg';
-	import GitHubSvg from '$lib/imgs/GitHub.svg';
-	import UberSvg from '$lib/imgs/Uber.svg';
-	import MicrosoftSvg from '$lib/imgs/Microsoft.svg';
-	import NotionSvg from '$lib/imgs/Notion.svg';
-	import Company1 from '../icons/Company1.svelte';
-	import Company2 from '../icons/Company2.svelte';
-	import Company3 from '../icons/Company3.svelte';
-	import Company4 from '../icons/Company4.svelte';
-	import Company5 from '../icons/Company5.svelte';
-	import Company6 from '../icons/Company6.svelte';
+	import Company1 from '../svgs/Company1.svelte';
+	import Company2 from '../svgs/Company2.svelte';
+	import Company3 from '../svgs/Company3.svelte';
+	import Company4 from '../svgs/Company4.svelte';
+	import Company5 from '../svgs/Company5.svelte';
+	import Company6 from '../svgs/Company6.svelte';
 	import Marquee from '../magic/marquee/Marquee.svelte';
 </script>
 

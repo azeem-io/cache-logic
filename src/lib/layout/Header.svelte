@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo2 from '$lib/components/icons/Logo2.svelte';
+	import Logo2 from '$lib/components/svgs/Logo2.svelte';
 	import NavLinks from '$lib/components/magic/NavLinks.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { cn } from '$lib/utils';
@@ -9,22 +9,17 @@
 	const menuItem = [
 		{
 			id: 1,
-			label: 'Features',
+			label: 'Services',
 			href: '#'
 		},
 		{
 			id: 2,
-			label: 'Pricing',
+			label: 'About Us',
 			href: '#'
 		},
 		{
 			id: 3,
-			label: 'Careers',
-			href: '#'
-		},
-		{
-			id: 4,
-			label: 'Contact Us',
+			label: 'Contact',
 			href: '#'
 		}
 	];
@@ -55,22 +50,32 @@
 	<div class="container flex h-14 items-center justify-between">
 		<!-- <a class="text-md flex items-center" href="/"> Cache Logic </a> -->
 		<Logo2 />
-		<div class="hidden md:flex">
+		<div class="hidden w-full items-center justify-between md:flex">
 			<NavLinks />
+			<div class="ml-auto hidden h-full items-center md:flex">
+				<Button
+					class="mr-6 text-sm"
+					on:click={() => {
+						const contactSection = document.getElementById('contact-section');
+						if (contactSection) {
+							contactSection.scrollIntoView({ behavior: 'smooth' });
+						}
+					}}
+				>
+					Contact Us
+				</Button>
+			</div>
+			<button class="ml-6 md:hidden" use:toggleOverflowHidden>
+				<span class="sr-only">Toggle menu</span>
+				{#if hamburgerMenuIsOpen}
+					<XIcon strokeWidth={1.4} class="text-gray-300" />
+				{:else}
+					<AlignJustify strokeWidth={1.4} class="text-gray-300" />
+				{/if}
+			</button>
 		</div>
-		<div class="ml-auto hidden h-full items-center md:flex">
-			<Button class="mr-6 text-sm" href="/contact">Contact Us</Button>
-		</div>
-		<button class="ml-6 md:hidden" use:toggleOverflowHidden>
-			<span class="sr-only">Toggle menu</span>
-			{#if hamburgerMenuIsOpen}
-				<XIcon strokeWidth={1.4} class="text-gray-300" />
-			{:else}
-				<AlignJustify strokeWidth={1.4} class="text-gray-300" />
-			{/if}
-		</button>
+		<!-- {/if} -->
 	</div>
-	<!-- {/if} -->
 </header>
 
 <nav

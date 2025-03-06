@@ -2,8 +2,11 @@
 	import Ripple from '../magic/Ripple.svelte';
 	import Badge from '../magic/Badge.svelte';
 	import SectionHeading from './SectionHeading.svelte';
-	import { ExternalLink, Twitter, Linkedin, Globe, ArrowUpRightIcon } from 'lucide-svelte';
+	import { ArrowUpRightIcon } from 'lucide-svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import TwitterIcon from '../svgs/TwitterIcon.svelte';
+	import LinkedinIcon from '../svgs/LinkedinIcon.svelte';
+	import DribbleIcon from '../svgs/DribbleIcon.svelte';
 
 	const teamMembers = [
 		{
@@ -14,9 +17,9 @@
 			image: '/images/team1.png',
 			featured: true,
 			socials: [
-				{ icon: Twitter, url: '#' },
-				{ icon: Linkedin, url: '#' },
-				{ icon: Globe, url: '#' }
+				{ icon: TwitterIcon, url: '#' },
+				{ icon: LinkedinIcon, url: '#' },
+				{ icon: DribbleIcon, url: '#' }
 			]
 		},
 		{

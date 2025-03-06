@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { ArrowRight, Container, ShieldCheck } from 'lucide-svelte';
 	import SectionHeading from './SectionHeading.svelte';
-	import ChartIcon from '../icons/ChartIcon.svelte';
-	import ZapIcon from '../icons/ZapIcon.svelte';
-	import MessageIcon from '../icons/MessageIcon.svelte';
-	import ChatIcon from '../icons/ChatIcon.svelte';
+	import ChartIcon from '../svgs/ChartIcon.svelte';
+	import ZapIcon from '../svgs/ZapIcon.svelte';
+	import MessageIcon from '../svgs/MessageIcon.svelte';
+	import ChatIcon from '../svgs/ChatIcon.svelte';
 	import { goto } from '$app/navigation';
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails } from 'svelte-inview';
@@ -115,7 +115,6 @@
 </div>
 
 <style>
-	/* Define animation keyframes */
 	@keyframes fadeInUp {
 		from {
 			opacity: 0;
@@ -128,7 +127,7 @@
 	}
 
 	.card-animated {
-		animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+		animation: fadeInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 		opacity: 0;
 	}
 </style>

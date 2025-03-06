@@ -1,13 +1,13 @@
 <script>
-	import FacebookIcon from '$lib/components/icons/FacebookIcon.svelte';
-	import GithubIcon from '$lib/components/icons/GithubIcon.svelte';
-	import LinkedinIcon from '$lib/components/icons/LinkedinIcon.svelte';
+	import FacebookIcon from '$lib/components/svgs/FacebookIcon.svelte';
+	import GithubIcon from '$lib/components/svgs/GithubIcon.svelte';
+	import LinkedinIcon from '$lib/components/svgs/LinkedinIcon.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 
-	import Logo2 from '$lib/components/icons/Logo2.svelte';
-	import TwitterIcon from '$lib/components/icons/TwitterIcon.svelte';
+	import Logo2 from '$lib/components/svgs/Logo2.svelte';
+	import TwitterIcon from '$lib/components/svgs/TwitterIcon.svelte';
 	import { Phone } from 'lucide-svelte';
-	import LogoText from '$lib/components/icons/LogoText.svelte';
+	import LogoText from '$lib/components/svgs/LogoText.svelte';
 
 	const footerNavs = [
 		{
@@ -60,19 +60,19 @@
 <footer class="relative w-full overflow-hidden bg-[#0C111D] text-gray-400">
 	<!-- Header Section (from the image) -->
 	<div
-		class="mx-auto flex w-full max-w-screen-2xl flex-col items-center justify-between px-8 py-12 pb-16 md:flex-row md:py-16"
+		class="mx-auto flex w-full max-w-screen-2xl flex-col items-start justify-between px-8 py-12 pb-16 md:flex-row md:py-16"
 	>
 		<div class="flex flex-col gap-4">
-			<h1 class=" text-3xl font-bold text-white md:text-2xl">
+			<h1 class="text-3xl font-semibold text-white">
 				Innovating IT solutions for the modern world.
 			</h1>
-			<p class=" mb-6 text-lg text-gray-300">
-				Empowering businesses with cutting-edge technology and tailored solutions.
+			<p class=" mb-6 text-xl text-gray-300">
+				Empowering businesses with cutting-edge technology and <br /> tailored solutions.
 			</p>
 		</div>
 		<div class="flex w-full flex-col gap-4 md:mb-12 md:w-auto md:flex-row">
-			<Button variant="secondary" href="/services">Discover Our Services</Button>
-			<Button variant="ghost" class="border text-white" href="/contact"
+			<Button size="lg" variant="secondary" href="/services">Discover Our Services</Button>
+			<Button size="lg" variant="ghost" class="border text-white" href="/contact"
 				><Phone size={16} class="mr-1.5" /> Contact Us</Button
 			>
 		</div>
@@ -129,6 +129,4 @@
 	</div>
 	<div class="mx-auto max-w-screen-2xl border-t border-neutral-700/20 pb-8" />
 	<LogoText />
-
-
 </footer>
