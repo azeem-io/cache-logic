@@ -53,7 +53,7 @@
 				<div class="text-center text-gray-800">
 					<h3 class="mb-2 text-xl font-semibold">{location.country}</h3>
 					<p class="mb-4 text-gray-600">{location.address}</p>
-					<a href="#" class="font-medium text-[#415EC6] hover:text-[#415EC6]"> Find Us </a>
+					<a href="#" class="font-semibold text-[#415EC6] hover:text-[#415EC6]"> Find Us </a>
 				</div>
 			{/each}
 
@@ -62,7 +62,7 @@
 				<p class="mb-4 text-gray-600">{businessHours}</p>
 				<a
 					href="tel:{phoneNumber.replace(/\D/g, '')}"
-					class="text-sm font-medium text-[#415EC6] hover:text-[#415EC6]"
+					class="text-sm font-semibold text-[#415EC6] hover:text-[#415EC6]"
 				>
 					{phoneNumber}
 				</a>

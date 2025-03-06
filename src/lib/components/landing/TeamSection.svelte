@@ -54,18 +54,22 @@
 			<Button href="#">We're hiring!</Button>
 		</div>
 
-		<div class="mx-auto flex w-full max-w-7xl flex-col gap-6 lg:flex-row">
+		<div class="mx-auto flex w-full max-w-5xl flex-col gap-6 lg:flex-row">
 			<!-- Featured team member (Faizan) -->
-			<div class="relative w-full overflow-hidden rounded-3xl lg:w-3/5" style="aspect-ratio: 4/3;">
+			<div
+				class="relative w-full overflow-hidden rounded-l-3xl shadow-[0px_8px_32px_rgba(29,57,102,0.6)] lg:w-3/5"
+				style="aspect-ratio: 4/3;"
+			>
 				<img
 					src={teamMembers[0].image}
 					alt={teamMembers[0].name}
 					class="h-full w-full object-cover"
 				/>
 				<div class="absolute bottom-0 left-0 right-0 p-8 text-left text-white">
-					<!-- Frosted glass effect container -->
-					<div class="rounded-2xl border border-white/30 bg-white/10 px-5 py-6 backdrop-blur-md">
-						<div class="flex flex-col gap-4 font-semibold">
+					<button
+						class="w-full rounded-2xl border border-white/30 bg-white/10 px-5 py-6 text-left backdrop-blur-md"
+					>
+						<div class="flex flex-col font-semibold">
 							<h3 class="flex w-full justify-between text-3xl">
 								{teamMembers[0].name}
 								<ArrowUpRightIcon />
@@ -80,22 +84,24 @@
 								</a>
 							{/each}
 						</div>
-					</div>
+					</button>
 				</div>
 			</div>
 
 			<!-- Other team members -->
 			<div class="flex w-full flex-col gap-6 lg:w-2/5">
-				{#each teamMembers.slice(1) as member}
+				{#each teamMembers.slice(1) as member, i}
 					<div
-						class="relative w-full flex-1 overflow-hidden rounded-3xl"
+						class="relative w-full flex-1 overflow-hidden shadow-[0px_8px_32px_rgba(29,57,102,0.6)] {i ==
+						0
+							? 'rounded-tr-3xl'
+							: 'rounded-br-3xl'}"
 						style="aspect-ratio: 8/7;"
 					>
 						<img src={member.image} alt={member.name} class="h-full w-full object-cover" />
 						<div class="absolute bottom-0 left-0 right-0 p-6 text-left text-white">
-							<!-- Info container -->
-							<div
-								class="rounded-2xl border border-white/30 bg-white/10 px-5 py-6 backdrop-blur-md"
+							<button
+								class="w-full rounded-2xl border border-white/30 bg-white/10 px-5 py-6 text-left backdrop-blur-md"
 							>
 								<div class="flex flex-col gap-4 font-semibold">
 									<h3 class="flex w-full justify-between text-3xl">
@@ -104,7 +110,7 @@
 									</h3>
 									<p class="text-lg text-gray-200">{member.role}</p>
 								</div>
-							</div>
+							</button>
 						</div>
 					</div>
 				{/each}

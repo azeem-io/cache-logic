@@ -11,7 +11,7 @@
 
 <div
 	class={cn(
-		'group relative mx-auto flex max-w-7xl overflow-hidden p-2 [--duration:30s] [--gap:4rem] [gap:var(--gap)]',
+		'group relative mx-auto flex max-w-7xl overflow-hidden [--duration:30s] [--gap:2rem] [gap:var(--gap)]  md:p-2 md:[--gap:4rem]',
 		{
 			'flex-row': !vertical,
 			'flex-col': vertical

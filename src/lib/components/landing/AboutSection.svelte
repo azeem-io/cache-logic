@@ -52,7 +52,7 @@
 			{#each serviceItems as item}
 				<div class="flex flex-col items-center text-center text-gray-800">
 					<div
-						class="relative mb-4 flex h-12 w-12 border-[8px] border-[#F5F5FF] items-center justify-center rounded-full bg-[#EBECFF] text-primary"
+						class="relative mb-4 flex h-12 w-12 items-center justify-center rounded-full border-[8px] border-[#F5F5FF] bg-[#EBECFF] text-primary"
 					>
 						<svelte:component this={item.icon} size={20} class="z-[900]" />
 					</div>
@@ -62,7 +62,7 @@
 					
 					</div> -->
 					<h3 class="mb-2 text-xl font-semibold">{item.title}</h3>
-					<p class="mb-4 text-gray-600">{item.description}</p>
+					<p class="mb-4 max-w-sm text-gray-600">{item.description}</p>
 					<a
 						href={item.link}
 						class="flex items-center font-bold text-[#415EC6] hover:text-[#415EC6]"

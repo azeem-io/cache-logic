@@ -1,4 +1,9 @@
-<svg width="170" height="48" viewBox="0 0 170 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+	class="h-auto w-[110px] md:w-[170px]"
+	viewBox="0 0 170 48"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<path
 		fill-rule="evenodd"
 		clip-rule="evenodd"
