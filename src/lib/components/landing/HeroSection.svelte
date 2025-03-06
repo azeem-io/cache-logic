@@ -4,6 +4,7 @@
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { cubicOut } from 'svelte/easing';
+	import BackgroundPattern from '../svgs/BackgroundPattern.svelte';
 
 	let mounted = false;
 	onMount(() => {

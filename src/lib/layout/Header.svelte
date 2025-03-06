@@ -5,6 +5,7 @@
 	import { cn } from '$lib/utils';
 	import { AlignJustify, XIcon } from 'lucide-svelte';
 	import { fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
 	const menuItem = [
 		{
@@ -25,6 +26,8 @@
 	];
 
 	let hamburgerMenuIsOpen = false;
+	let scrollY = 0;
+	let hasScrolled = false;
 
 	function toggleOverflowHidden(node: HTMLElement) {
 		node.addEventListener('click', () => {
@@ -39,24 +42,57 @@
 			}
 		});
 	}
+	
 	let innerWidth = 0;
+
+	// Handle scroll events
+	function handleScroll() {
+		// Only update when crossing the threshold to prevent unnecessary rerenders
+		const shouldHaveScrolled = scrollY > 20;
+		if (hasScrolled !== shouldHaveScrolled) {
+			hasScrolled = shouldHaveScrolled;
+		}
+	}
+
+	// Add a reactive statement to ensure scrollY changes always update hasScrolled
+	$: {
+		hasScrolled = scrollY > 20;
+	}
+
+	onMount(() => {
+		// Initial check on mount
+		hasScrolled = window.scrollY > 20;
+		
+		// Add a more direct scroll listener as a backup
+		window.addEventListener('scroll', () => {
+			hasScrolled = window.scrollY > 20;
+		}, { passive: true });
+		
+		return () => {
+			window.removeEventListener('scroll', () => {
+				hasScrolled = window.scrollY > 20;
+			});
+		};
+	});
 </script>
 
-<svelte:window bind:innerWidth />
+<svelte:window bind:innerWidth bind:scrollY on:scroll={handleScroll} />
+
 <header
-	class="fixed left-0 top-0 z-[999] w-full -translate-y-4 animate-fade-in border-b bg-white opacity-0 backdrop-blur-md"
+	class={cn(
+		"fixed left-0 top-0 z-[999] w-full -translate-y-4 animate-fade-in opacity-0 transition-colors duration-300",
+		hasScrolled ? "bg-white border-b" : "bg-transparent"
+	)}
 >
-	<!-- {#if innerWidth < 768} -->
 	<div
 		class="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-6 md:px-8"
 	>
-		<!-- <a class="text-md flex items-center" href="/"> Cache Logic </a> -->
 		<Logo2 />
 		<div class="hidden w-full items-center justify-between md:flex">
 			<NavLinks />
 			<div class="ml-auto hidden h-full items-center md:flex">
 				<Button
-					class=" text-sm"
+					class="text-sm"
 					on:click={() => {
 						const contactSection = document.getElementById('contact-section');
 						if (contactSection) {
@@ -76,13 +112,12 @@
 				<AlignJustify strokeWidth={1.4} class="text-gray-900" />
 			{/if}
 		</button>
-		<!-- {/if} -->
 	</div>
 </header>
 
 <nav
 	class={cn(
-		`fixed left-0  top-0 z-[999] h-screen w-full overflow-auto `,
+		`fixed left-0 top-0 z-[999] h-screen w-full overflow-auto`,
 		{
 			'pointer-events-none': !hamburgerMenuIsOpen
 		},

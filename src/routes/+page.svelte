@@ -8,6 +8,7 @@
 	import TeamSection from '$lib/components/landing/TeamSection.svelte';
 	import ContactSection from '$lib/components/landing/ContactSection.svelte';
 	import PortfolioSection from '$lib/components/landing/PortfolioSection.svelte';
+	import BackgroundPattern from '$lib/components/svgs/BackgroundPattern.svelte';
 </script>
 
 <svelte:head>
@@ -27,6 +28,8 @@
 	<meta name="twitter:image" content={seo.image} />
 	<meta name="twitter:site" content="@cache_logic" />
 </svelte:head>
+
+<BackgroundPattern />
 <HeroSection />
 <ClientSection />
 <ServicesSection />
