@@ -60,15 +60,15 @@
 		<div class="mx-auto flex w-full max-w-5xl flex-col gap-6 lg:flex-row">
 			<!-- Featured team member (Faizan) -->
 			<div
-				class="relative w-full overflow-hidden rounded-l-3xl shadow-[0px_8px_32px_rgba(29,57,102,0.6)] lg:w-3/5"
-				style="aspect-ratio: 4/3;"
+				class="relative aspect-[4/3] min-h-[30rem] w-full overflow-hidden rounded-t-3xl shadow-[0px_8px_32px_rgba(29,57,102,0.6)] lg:w-3/5 lg:rounded-l-3xl lg:rounded-tr-none"
+				style=""
 			>
 				<img
 					src={teamMembers[0].image}
 					alt={teamMembers[0].name}
 					class="h-full w-full object-cover"
 				/>
-				<div class="absolute bottom-0 left-0 right-0 p-8 text-left text-white">
+				<div class="absolute bottom-0 left-0 right-0 p-4 text-left text-white lg:p-6">
 					<button
 						class="w-full rounded-2xl border border-white/30 bg-white/10 px-5 py-6 text-left backdrop-blur-md"
 					>
@@ -80,7 +80,7 @@
 							<p class="text-lg">{teamMembers[0].role}</p>
 							<p class="mt-1">{teamMembers[0].bio}</p>
 						</div>
-						<div class="mt-4 flex space-x-3">
+						<div class="mt-4 hidden space-x-3 md:flex">
 							{#each teamMembers[0].socials as social}
 								<a href={social.url} class="text-white hover:text-gray-300">
 									<svelte:component this={social.icon} class="h-5 w-5" />
@@ -97,12 +97,12 @@
 					<div
 						class="relative w-full flex-1 overflow-hidden shadow-[0px_8px_32px_rgba(29,57,102,0.6)] {i ==
 						0
-							? 'rounded-tr-3xl'
-							: 'rounded-br-3xl'}"
+							? 'lg:rounded-tr-3xl'
+							: 'rounded-b-3xl rounded-bl-none lg:rounded-br-3xl'}"
 						style="aspect-ratio: 8/7;"
 					>
 						<img src={member.image} alt={member.name} class="h-full w-full object-cover" />
-						<div class="absolute bottom-0 left-0 right-0 p-6 text-left text-white">
+						<div class="absolute bottom-0 left-0 right-0 p-4 text-left text-white lg:p-6">
 							<button
 								class="w-full rounded-2xl border border-white/30 bg-white/10 px-5 py-6 text-left backdrop-blur-md"
 							>
