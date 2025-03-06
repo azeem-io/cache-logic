@@ -18,8 +18,8 @@
 	];
 
 	let markers = [
-		{ id: 'us', x: 170, y: 215, label: 'United States' },
-		{ id: 'pk', x: 695, y: 230, label: 'Pakistan' }
+		{ id: 'us', x: 17, y: 45, label: 'United States' },
+		{ id: 'pk', x: 66, y: 49, label: 'Pakistan' }
 	];
 
 	const businessHours = 'Mon-Fri from 8am to 5pm (PST)';
@@ -33,13 +33,15 @@
 			heading="We are WORLDWIDE"
 			paragraph="We help our clients from almost every part of the world."
 		/>
-		<div class="`scale-[1] relative mx-auto aspect-[16/9] w-fit overflow-hidden rounded-lg">
+		<div
+			class="`scale-[1] relative mx-auto aspect-[16/9] w-full max-w-5xl overflow-hidden rounded-lg"
+		>
 			<WorldMap />
 			<div class="absolute inset-0">
 				{#each markers as marker, i}
 					<div
 						class="absolute h-36 w-36 -translate-x-1/2 -translate-y-1/2"
-						style="left: {marker.x}px; top: {marker.y}px;"
+						style="left: {marker.x}%; top: {marker.y}%;"
 					>
 						<Ripple />
 					</div>
