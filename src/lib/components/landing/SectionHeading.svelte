@@ -7,10 +7,10 @@
 	export let align: 'center' | 'left' = 'center';
 </script>
 
-<div class="flex flex-col {align === 'center' ? 'items-center' : 'items-start'} gap-4 md:gap-6">
+<div class=" flex flex-col {align === 'center' ? 'items-center' : 'items-start'} gap-4 md:gap-6">
 	<Badge>{badgeText}</Badge>
 	<h2
-		class="-mt-3 text-3xl font-semibold text-gray-900 md:text-4xl {align === 'left'
+		class="-mt-1 text-3xl font-semibold text-gray-900 md:-mt-3 md:text-4xl {align === 'left'
 			? 'text-left'
 			: 'text-center'}"
 	>

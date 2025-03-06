@@ -43,13 +43,13 @@
 			align="left"
 		/>
 
-		<div class="mt-12 flex w-full flex-col gap-10 lg:flex-row">
+		<div class=" flex w-full flex-col gap-10 lg:flex-row">
 			<!-- Contact Info - Left Column -->
 			<div
-				class="flex h-fit flex-1 flex-col flex-wrap items-start justify-start gap-0 md:flex-row md:gap-8"
+				class="flex h-fit flex-1 flex-col flex-wrap items-start justify-start gap-0 p-2 md:flex-row md:gap-8"
 			>
 				{#each contactInfo as info}
-					<div class="mb-4 flex h-fit flex-col items-start gap-2.5">
+					<div class="mt-10 flex h-fit flex-col items-start gap-2.5 md:mb-4">
 						<svelte:component this={info.icon} class="" />
 						<h3 class="text-xl font-semibold text-gray-900">{info.title}</h3>
 						<p class=" text-gray-600">{info.description}</p>

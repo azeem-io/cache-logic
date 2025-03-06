@@ -52,13 +52,12 @@
 				culture that empowers you to do your best work."
 		/>
 
-		<div class="flex flex-col gap-4 md:flex-row">
-			<Button href="#" variant="outline">Read our principles</Button>
-			<Button href="#">We're hiring!</Button>
+		<div class="flex w-full flex-row gap-4">
+			<Button class="flex-1" href="#" variant="outline">Read our principles</Button>
+			<Button class="flex-1" href="#">We're hiring!</Button>
 		</div>
 
 		<div class="mx-auto flex w-full max-w-5xl flex-col gap-6 lg:flex-row">
-			<!-- Featured team member (Faizan) -->
 			<div
 				class="relative aspect-[4/3] min-h-[30rem] w-full overflow-hidden rounded-t-3xl shadow-[0px_8px_32px_rgba(29,57,102,0.6)] lg:w-3/5 lg:rounded-l-3xl lg:rounded-tr-none"
 				style=""
@@ -83,7 +82,7 @@
 						<div class="mt-4 hidden space-x-3 md:flex">
 							{#each teamMembers[0].socials as social}
 								<a href={social.url} class="text-white hover:text-gray-300">
-									<svelte:component this={social.icon} class="h-5 w-5" />
+									<svelte:component this={social.icon} />
 								</a>
 							{/each}
 						</div>

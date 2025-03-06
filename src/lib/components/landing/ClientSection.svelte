@@ -8,7 +8,7 @@
 	import Marquee from '../magic/marquee/Marquee.svelte';
 </script>
 
-<section id="clients" class="mx-auto px-4 text-center md:px-8">
+<section id="clients" class="mx-auto mt-20 px-4 text-center md:mt-0 md:px-8">
 	<div class="md:py-14">
 		<div class="max-w-screen mx-auto px-4 md:px-8">
 			<h2 class="pb-4 text-center font-medium text-gray-600">

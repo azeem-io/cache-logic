@@ -47,14 +47,16 @@
 	class="fixed left-0 top-0 z-[999] w-full -translate-y-4 animate-fade-in border-b bg-white opacity-0 backdrop-blur-md"
 >
 	<!-- {#if innerWidth < 768} -->
-	<div class="container flex h-14 items-center justify-between">
+	<div
+		class="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-6 md:px-8"
+	>
 		<!-- <a class="text-md flex items-center" href="/"> Cache Logic </a> -->
 		<Logo2 />
 		<div class="hidden w-full items-center justify-between md:flex">
 			<NavLinks />
 			<div class="ml-auto hidden h-full items-center md:flex">
 				<Button
-					class="mr-6 text-sm"
+					class=" text-sm"
 					on:click={() => {
 						const contactSection = document.getElementById('contact-section');
 						if (contactSection) {
@@ -65,15 +67,15 @@
 					Contact Us
 				</Button>
 			</div>
-			<button class="ml-6 md:hidden" use:toggleOverflowHidden>
-				<span class="sr-only">Toggle menu</span>
-				{#if hamburgerMenuIsOpen}
-					<XIcon strokeWidth={1.4} class="text-gray-300" />
-				{:else}
-					<AlignJustify strokeWidth={1.4} class="text-gray-300" />
-				{/if}
-			</button>
 		</div>
+		<button class="ml-6 md:hidden" use:toggleOverflowHidden>
+			<span class="sr-only">Toggle menu</span>
+			{#if hamburgerMenuIsOpen}
+				<XIcon strokeWidth={1.4} class="text-gray-900" />
+			{:else}
+				<AlignJustify strokeWidth={1.4} class="text-gray-900" />
+			{/if}
+		</button>
 		<!-- {/if} -->
 	</div>
 </header>
@@ -90,15 +92,15 @@
 	)}
 >
 	{#if hamburgerMenuIsOpen === true}
-		<div class="container flex h-14 items-center justify-between">
+		<div class="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-6">
 			<Logo2 />
 
 			<button class="md:hidden" use:toggleOverflowHidden>
 				<span class="sr-only">Toggle menu</span>
 				{#if hamburgerMenuIsOpen}
-					<XIcon strokeWidth={1.4} class="text-gray-300" />
+					<XIcon strokeWidth={1.4} class="text-gray-900" />
 				{:else}
-					<AlignJustify strokeWidth={1.4} class="text-gray-300" />
+					<AlignJustify strokeWidth={1.4} class="text-gray-900" />
 				{/if}
 			</button>
 		</div>

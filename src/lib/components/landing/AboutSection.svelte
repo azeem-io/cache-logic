@@ -30,7 +30,7 @@
 	];
 </script>
 
-<div class="bg-white px-4 py-16 sm:px-6 lg:px-8">
+<div class="mf:mb-16 mb-16 bg-white px-4 sm:px-6 md:py-16 lg:px-8">
 	<div class="mx-auto flex w-full flex-col items-center gap-12 text-center">
 		<SectionHeading
 			badgeText="Why Us"

@@ -41,7 +41,7 @@
 	];
 </script>
 
-<div class="bg-white px-4 py-24 sm:px-6 lg:px-8">
+<div class="mb-24 mt-12 bg-white px-4 sm:px-6 md:py-24 lg:px-8">
 	<div class="mx-auto w-full max-w-7xl">
 		<SectionHeading
 			badgeText="Our Portfolio"
