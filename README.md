@@ -71,4 +71,4 @@ pnpm preview
 
 ## Deployment
 
-This SvelteKit application has been deployed on Vercel: https://cache-logic-azeem.vercel.app/
+This application has been deployed on Vercel: https://cache-logic-azeem.vercel.app/
