@@ -6,6 +6,7 @@
 	import AboutSection from '$lib/components/landing/AboutSection.svelte';
 	import ServicesSection from '$lib/components/landing/ServicesSection.svelte';
 	import TeamSection from '$lib/components/landing/TeamSection.svelte';
+	import ContactSection from '$lib/components/landing/ContactSection.svelte';
 </script>
 
 <svelte:head>
@@ -31,3 +32,4 @@
 <AboutSection />
 <TeamSection />
 <LocationSection />
+<ContactSection/>
