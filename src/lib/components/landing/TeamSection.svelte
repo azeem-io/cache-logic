@@ -52,9 +52,9 @@
 				culture that empowers you to do your best work."
 		/>
 
-		<div class="flex w-full flex-row gap-4">
-			<Button class="flex-1" href="#" variant="outline">Read our principles</Button>
-			<Button class="flex-1" href="#">We're hiring!</Button>
+		<div class="flex w-full justify-center flex-row gap-4">
+			<Button class="w-full md:w-fit" href="#" variant="outline">Read our principles</Button>
+			<Button class="w-full md:w-fit" href="#">We're hiring!</Button>
 		</div>
 
 		<div class="mx-auto flex w-full max-w-5xl flex-col gap-6 lg:flex-row">

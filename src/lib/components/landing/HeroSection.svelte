@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowRightIcon } from 'lucide-svelte';
+	import { ArrowRightIcon, Phone } from 'lucide-svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
@@ -38,12 +38,12 @@
 				Empowering businesses with cutting-edge technology and tailored solutions.
 			</p>
 			<div transition:fly={{ y: 30, delay: 180, duration: 400 }}>
-				<Button variant="secondary" class="w-fit  gap-1 rounded-lg   ease-in-out ">
-					<span>Get Started for free </span>
-					<ArrowRightIcon
-						class="ml-1 size-4 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
-					/>
-				</Button>
+				<div class="flex w-full flex-col gap-4 md:mb-12 md:w-auto md:flex-row">
+					<Button size="lg" variant="secondary" href="/services">Discover Our Services</Button>
+					<Button size="lg" variant="ghost" class="border text-white" href="/contact"
+						><Phone size={16} class="mr-1.5" /> Contact Us</Button
+					>
+				</div>
 			</div>
 		</div>
 	{/if}
