@@ -12,7 +12,7 @@
 	});
 </script>
 
-<section id="hero" class="relative mx-auto mt-[4.5rem] h-fit px-4 md:px-8">
+<section id="hero" class="relative mx-auto mt-[4.5rem] min-h-[80vh] h-fit px-4 md:px-8">
 	{#if mounted}
 		<div
 			transition:fly={{ y: -60, delay: 200, duration: 400, easing: cubicOut }}
